@@ -15,7 +15,7 @@ from flask.ext import admin, login
 from flask.ext.admin.contrib import sqla
 from flask.ext.admin import helpers, expose
 from werkzeug.security import generate_password_hash, check_password_hash
-
+from flask_security import Security
 path = op.join(op.dirname(__file__),'projects')
 
 
@@ -40,6 +40,18 @@ class MyAdminIndexView(admin.AdminIndexView):
 			nickname = user
 			form = LoginForm()
 			return render_template('insp_login.html',nickname=nickname,form=form)
+    
+    @expose('/fileadmin/')
+    @expose('/projects/')
+    def add_project(self):
+        user = session.get('nickname')
+        if user:
+            #return render_template('layout.html',nickname=user)
+            return render_template('admin_panel.html',nickname = user)
+        else:
+            nickname = user
+            form = LoginForm()
+            return render_template('insp_login.html',nickname=nickname,form=form)
 
     @expose('/login/', methods=('GET', 'POST'))
     def login_view():
@@ -77,7 +89,6 @@ class MyAdminIndexView(admin.AdminIndexView):
         session.pop('nickname',None)
         session.pop('password', None)
         return redirect(url_for('index')) 
-
 
 
 #admin = fl_admin(app,name='portfolio', template_mode='bootstrap3')

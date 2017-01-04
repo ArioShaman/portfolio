@@ -98,7 +98,6 @@ def add():
 		form = LoginForm()
 		return render_template('insp_login.html',nickname=nickname,form=form)
 
-
 @app.route('/test-templ',methods=['POST','GET'])
 def get_form():
 	data = request.args.get('hidden')
