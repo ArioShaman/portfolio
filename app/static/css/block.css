@@ -1,0 +1,167 @@
+.eff-10 {
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  -o-object-fit: contain;
+}
+.review-image{
+  -o-object-fit: cover;
+  height: 180px;
+}
+.eff-10 img {
+  min-width: 120%;
+  min-height: 100%;
+}
+.eff-10 .overlay {
+  width: 0px;
+  height: 0px;
+  border: 50px solid transparent;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -moz-transform-origin: right;
+  -ms-transform-origin: right;
+  -o-transform-origin: right;
+  -webkit-transform-origin: right;
+  transform-origin: right;
+  -moz-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+.eff-10 .overlay .icon {
+  width: 35px;
+  height: 23px;
+  background: url('http://eisenpar.com/view-icon.png') 0 0 no-repeat;
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  -moz-transition: all 0.01s linear 0.2s;
+  -o-transition: all 0.01s linear 0.2s;
+  -ms-transition: all 0.01s linear 0.2s;
+  -webkit-transition: all 0.01s linear 0.2s;
+  transition: all 0.01s linear 0.2s;
+}
+.eff-10 .gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: -moz-radial-gradient(circle, rgba(255,255,255,0) 25%, rgba(255,255,255,0.7));
+  background: -ms-radial-gradient(circle, rgba(255,255,255,0) 25%, rgba(255,255,255,0.7));
+  background: -o-radial-gradient(circle, rgba(255,255,255,0) 25%, rgba(255,255,255,0.7));
+  background: -webkit-radial-gradient(circle, rgba(255,255,255,0) 25%, rgba(255,255,255,0.7));
+  background: radial-gradient(circle, rgba(255,255,255,0) 25%, rgba(255,255,255,0.7));
+  opacity: 0;
+  -moz-transition: all 0.3s linear 0.2s;
+  -ms-transition: all 0.3s linear 0.2s;
+  -o-transition: all 0.3s linear 0.2s;
+  -webkit-transition: all 0.3s linear 0.2s;
+  transition: all 0.3s linear 0.2s;
+} 
+.eff-10 .caption {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  -moz-transform: scaleY(0);
+  -o-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -moz-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+.eff-10 .caption h4 {
+  width: 80%;
+  margin: 10% auto 0px auto;
+  background: rgba(0,0,0,0.7);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 22px;
+  padding: 6px 0px;
+  position: relative;
+}
+.eff-10 .caption h4:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  display: block;
+  border: 20px solid transparent;
+  border-top: 20px solid rgba(0,0,0,0.7);
+  position: absolute;
+  top: 100%;
+  left: 42%;
+}
+.eff-10 .caption p {
+  width: 100%;
+  max-width: -webkit-calc(80% - 20px);
+  max-width: -o-calc(80% - 20px);
+  max-width: -moz-calc(80% - 20px);
+  max-width: -ms-calc(80% - 20px);
+  max-width: calc(80% - 20px);
+  margin: 40px auto 0px auto;
+  background: rgba(0,0,0,0.8);
+  font-weight: 400;
+  padding: 6px 10px;
+  font-size: 14px;
+  min-height: 80px;
+}
+.eff-10 .caption a {
+  display: inline-block;
+  margin: 10px auto 0px auto;
+  background-color: #7F3B1B;
+  color: inherit;
+  padding: 7px 10px;
+  font-size: 15px;
+  box-shadow: inset 0px 0px 7px 1px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  text-decoration: none;
+}
+.eff-10:hover .overlay {
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+.eff-10:hover .overlay .icon {
+  opacity: 0;
+  -moz-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.eff-10:hover .gradient {
+  opacity: 1;
+  -moz-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.eff-10:hover .caption {
+  -moz-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  -o-transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -moz-transition-delay: 0.45s;
+  -ms-transition-delay: 0.45s;
+  -o-transition-delay: 0.45s;
+  -webkit-transition-delay: 0.45s;
+  transition-delay: 0.45s;
+}                  
+                

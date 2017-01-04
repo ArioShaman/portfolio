@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery</title>
+	<meta charset="utf-8">
+	{% include 'mini-temp/head.html' %}
+	<script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+	<script  src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+	<script  src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	
+</head>
+<body>
+	{% include 'mini-temp/navbar.html' %}
+
+
+<div class="gall-fon content-2 container-fluid">
+	<p class="gal-title">WELKOM TO MY GALLERY</p>
+
+	<div class="plus"><a href="/add_project"><i class="fa fa-plus fa-3x centr-plus" aria-hidden="true"></i></a>
+</div>
+</div>
+
+
+<div class="gallery-fon">
+	<div class="container">
+		<ul class="nav nav-tabs marg-100" id="myTab">
+		    <li class="active">
+		    	<a href="#home" data-toggle="pill">
+				  	<i class="fa fa-th-large icon-col" aria-hidden="true"></i>
+				</a>
+		    </li>
+		    <li class="">
+		    	<a href="#profile" data-toggle="tab">
+				  		<i class="fa fa-bars icon-col" aria-hidden="true"></i>
+				</a>
+		    </li>
+		  </ul>
+
+	 <div class="tab-content">
+	    <div class=" tab-pane active my-tab" id="home">
+	    	<div class="container-fluid marg-left-1">
+		  		<div class="tab-container">
+		  		{% for project in projects %}
+			  		<div class="test-block col-md-6 marg-lef">
+			  	
+			  			<div class="effect eff-10"> 
+						  <img class="gallery-img" src="{{project.cover}}" alt="Effect #10" /> 
+
+						  <div class="overlay"> 
+						    <div class="icon"></div> 
+						  </div> 
+
+						  <div class="gradient"></div> 
+						  <div class="caption"> 
+						    <h4>{{project.name}}</h4> 
+						    <p>{{project.cut_review}}</p> 
+						    <a class="btn" href="/review/{{project.name}}" title="View More">СМОТРЕТЬ</a> 
+						  </div> 
+						</div> 
+			  		</div>
+			  		{% endfor %}
+				  	</div>
+		  	</div>
+		  </div>
+
+
+	    <div class="tab-pane my-tab" id="profile">
+	    	<div class="tab-pane active my-tab" id="line">
+		  	<div class="container-fluid">
+		  		<div class="tab-container">
+			  		<div class="col-md-10 col-md-offset-1">
+			  		{% for project in projects %}
+			  		<div class="container">
+			  			<div class=" gall-container">
+				  			 <!--<div class="photo-gallery col-md-3  col-sm-3 col-xs-12"></div> -->
+				  			 <img class="photo-gallery col-md-3 col-sm-3 col-xs-12" src="{{project.cover}}" alt="Effect #10" /> 
+
+				  			 <div class="block-info
+				  			 col-md-6 col-sm-9 col-xs-12">
+				  			 	<h4>{{project.name}}</h4> 
+						    	<p>{{project.cut_review}}</p> 
+						    	
+						    		<a href="/review/{{project.name}}" title="View More"><div  class="my-btn" >СМОТРЕТЬ</div></a>
+						    	
+				  			 </div>
+				  		</div>
+				  	</div>
+				  	{% endfor %}
+			  			</div>
+			  		</div>
+			  		</div>			  					  		
+				</div>
+		  	</div>
+	    </div>
+
+
+
+  	</div>
+  </div>
+</div>
+
+<script
+  type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.min.js')}}">
+	$('#myTab a[href="#home"]').tab('show');
+	$('#myTab a[href="#profile"]').tab('show');
+	$('#myTab a:first').tab('show'); // Select first tab
+	$('#myTab a:last').tab('show'); // Select last tab
+</script>
+
+
+</body>
+</html>

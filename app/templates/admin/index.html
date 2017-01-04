@@ -1,0 +1,29 @@
+{% extends 'admin/master.html' %}
+{% block head_tail %}
+  <link href="{{ url_for('static', filename='css/layout.css') }}" rel="stylesheet">
+{% endblock %}
+	{% include 'mini-temp/head.html' %}
+
+{% block body %}
+ {% include 'mini-temp/nav-admin.html' %}
+<div class="empty-2">
+		<div class="panel-left">
+			<div class="adm-btn-cont">
+				<div class="adm-btn">
+					<a class="admin-link" href="#"><p class="margi">Общая информация</p></a>
+				</div>
+
+				<div class="adm-btn activer">
+					<a class="admin-link" href="/admin/fileadmin"><p class="margi">Управление контентом</p></a>
+				</div>
+				<div class="adm-btn">
+					<a class="admin-link" href="#"><p class="margi">< None ></p></a>
+				</div>
+				<div class="adm-btn">
+					<a class="admin-link" href="#"><p class="margi">< None ></p></a>
+				</div>
+			</div>
+		</div>
+
+</div>
+{% endblock body %}

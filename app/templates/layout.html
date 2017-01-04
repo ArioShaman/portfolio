@@ -1,0 +1,45 @@
+{% import 'admin/layout.html' as layout with context -%}
+{% extends 'admin/base.html' %}
+
+{% block head_tail %}
+  <link href="{{ url_for('static', filename='css/layout.css') }}" rel="stylesheet">
+{% endblock %}
+{% include 'mini-temp/head.html' %}
+{% block page_body %}
+{% include 'mini-temp/nav-admin.html' %}
+<div id="container">
+<div class="panel-left">
+      <div class="adm-btn-cont">
+        <div class="adm-btn">
+          <a class="admin-link" href="#"><p class="margi">Общая информация</p></a>
+        </div>
+
+        <div class="adm-btn activer">
+          <a class="admin-link" href="/admin/fileadmin"><p class="margi">Управление контентом</p></a>
+        </div>
+        <div class="adm-btn">
+          <a class="admin-link" href="/add_in_blog"><p class="margi">Добавить статью</p></a>
+        </div>
+        <div class="adm-btn">
+          <a class="admin-link" href="#"><p class="margi">< None ></p></a>
+        </div>
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="span2">
+      <ul class="nav nav-pills my-ul nav-cont">
+        {{ layout.menu() }}
+        {{ layout.menu_links() }}
+        {{ model_menu_bar }}
+      </ul>
+    </div>
+
+      <div id="my-content-2">        
+        {{ layout.messages() }}
+        {% block body %}{% endblock %}
+      </div>
+
+  </div>
+</div>
+{% endblock %}

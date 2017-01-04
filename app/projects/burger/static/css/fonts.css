@@ -1,0 +1,71 @@
+@font-face{
+	src: url(fonts/Peace-Sans.ttf);
+	font-family: Peace-Sans;
+}
+@font-face{
+	src: url(fonts/ComfortaaBold.ttf);
+	font-family: ComfortaaBold;
+}
+@font-face{
+	src: url(fonts/OpenSans-Semibold.ttf);
+	font-family: OpenSans-Semibold;
+}
+
+.opensans{
+	font-family: OpenSans-Semibold;
+	font-size: 16px;
+}
+
+.comfort{
+	font-family: ComfortaaBold;
+	color: #4B1702;
+	font-size: 18px;
+}
+.comfort-2{
+	font-family: ComfortaaBold;
+	color: #4B1702;
+	font-size: 17px;
+}
+.peace{
+	font-family: Peace-Sans;
+}
+.title-burg{
+	font-size: 23px;
+	padding-top: 10px;
+	padding-left: 10px;
+	color: #4B1702;
+	position: relative;
+}
+.price{
+	position: relative;
+	font-size: 23px;
+	padding-top: 10px;
+	color: #d62008;
+	text-align: right;
+	margin-top: -55px;
+	margin-right: 10px;
+}
+.we-offer-text{
+	font-family: Peace-Sans;
+	font-size: 33px;
+	text-align: center;
+	padding-top: 70px;
+}
+.orange{
+	color: orange;
+}
+.brown{
+	color: #4B1702;
+}
+.white{
+	color: white;
+}
+.map-logo-style{
+	padding-top: 20px;
+	font-size: 25px;
+}
+.call-style{
+	font-size: 22px;
+	padding-left: 30px;
+	margin-top: -30px;
+}

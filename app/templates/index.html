@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>main</title>
+	<meta charset="utf-8">
+	{% include 'mini-temp/head.html' %}
+	<script type="text/css" src="{{ url_for('static',filename='js/bootstrap.js')}}"></script>
+	<script type="text/css" src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+	<script  src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://bootstrap-ru.com/204/assets/js/bootstrap-tab.js"></script>
+</head>
+<body>
+	{% include 'mini-temp/navbar.html' %}
+	<div class="content fon-img">
+		<p class="merri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Привет, меня зовут Даниил Матвеев.
+			</p>
+			<p class="merri-2"> Я обычный вэбдизайнер который хочет показать тебе, дорогой друг, что-то новенькое и интересное. Заинтересован? Тогда листай дальше.</p>
+	</div>
+	<div class="over">
+		<div class="line"></div>
+		<div class="spec">
+			<p class="specialized">I'M SPECIALIZED IN:</p>
+		</div>
+		<div class="line"></div>
+	</div>
+
+<div class="fon">
+	<div class="container-fluid">
+		<div class="col-md-4 col-sm-4 col-xs-12 block-prof-1">
+				<img class="colon-img" src="static/css/img/adaptive-2.png">
+				<div class="gor-block">
+					<div class="gor-line-top"></div>
+						<p class="skills">ADAPTIVE DESIGN</p>
+					<div class="gor-line-bottom"></div>
+					<p class="description">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Как по мне, так это самый главный критерий, которому в наше время должен соответствовать каждый сайт. Поэтому это первая задача, которую я ставлю себе при создании сайта. Ведь большинство пользователей посещают сайты с мобильных устройств и хотят при этом чувствовать себя комфортно. И даже этот сайт имеет адаптивную верстку.</p>
+				</div>
+		</div>
+
+		<div class="col-md-4 col-sm-4 col-xs-12 block-prof-2">
+			<img class="colon-img" src="static/css/img/lamp.png">
+			<div class="gor-block">
+					<div class="gor-line-top"></div>
+						<p class="skills">CREATIVE IDEAS</p>
+					<div class="gor-line-bottom"></div>
+
+					<p class="description">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Кроме того, что исполню поставленную задачу так еще могу предложить и внести свои интересные задумки. Начиная с интересных анимаций и заканчивая креативными слайдерами. Да и вообще любая интересная вещица.</p>
+				</div>	
+		</div>
+
+		<div class="col-md-4 col-sm-4 col-xs-12 block-prof-2">
+			<img class="colon-img" src="static/css/img/list.png">
+			<div class="gor-block">
+					<div class="gor-line-top"></div>
+						<p class="skills">CORRECT EXECUTION OF TASKS</p>
+					<div class="gor-line-bottom"></div>
+
+					<p class="description">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Чем точнее будет поставлена задача, тем точнее она будет исполнена. Но если у вас нет ни задумки, ни зарисовки, то это не беда. Ведь сделать работу с чистого листа это тоже не проблема.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mini-gallery-fon">
+	<div class="container">
+		<div class="cil-md-12 col-sm-12 col-xs-12">
+			<p class="preview">PREVIEW MY PORTFOLIO</p>
+		</div>
+
+		<div class="m-block-gall-1 col-md-5 col-md-offset-0 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+			<div class="effect eff-10"> 
+			  <img class="review-image" src="/projects/burger/cover.png" alt="Effect #10" /> 
+
+			  <div class="overlay"> 
+			    <div class="icon"></div> 
+			  </div> 
+
+			  <div class="gradient"></div> 
+			  <div class="caption"> 
+			    <h4>Burger Shop</h4> 
+			    <p>Лендинг бургер-шопа</p> 
+			    <a class="btn" href="/review/burger-shop" title="View More">СМОТРЕТЬ</a> 
+			  </div> 
+			</div> 
+		</div>
+
+		<div class="m-block-gall-1 col-md-5 col-md-offset-2 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+			<div class="effect eff-10"> 
+			  <img class="review-image" src="/projects/Remgrad/cover.png" alt="Effect #10" /> 
+
+			  <div class="overlay"> 
+			    <div class="icon"></div> 
+			  </div> 
+
+			  <div class="gradient"></div> 
+			  <div class="caption"> 
+			    <h4>Remgrad.net</h4> 
+			    <p>Сверстанный полноценный сайт с тематикой ремонта квартир. Используется плосский дизайн</p> 
+			    <a class="btn" href="/review/Remgrad" title="View More">СМОТРЕТЬ</a> 
+			  </div> 
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<div class="mail-block">
+	<div class="container">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<p class="preview">SEND ME YOUR COMMENT</p>
+
+			<div class="form-block">
+				<form class="myform" method="POST" action="/send_mail">
+				{{ form.csrf_token }}
+					<div class="mart-tit">
+						{{form.name(class_="main-form")}}
+						{{form.email(class_="main-form")}}
+						{{form.comment(class_="main-form")}}
+						<!--<input autocomplete="off" type="text" placeholder="Полное имя" name="name">
+						<input autocomplete="off" type="text" name="email" placeholder="e-mail">
+						<input autocomplete="off" placeholder="Введите сюда свой отзыв" type="textarea" maxlength="200" name="comment">-->
+						<input  class="submit" type="submit" name="but" value="ОТПРАВИТЬ" class="animated-but">
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="bio-fon">
+	<div class="container">
+	<div class="cil-md-12 col-sm-12 col-xs-12">
+			<p class="preview">WHO I AM?</p>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-6">
+			<div class="ava-block">
+				<img class="ava-img" src="static/css/img/my-img.jpg">
+				<p class="name">Даниил Матвеев</p>
+			</div>
+		</div>
+
+		<div class="col-lg-4 col-md-3 height-400">
+			<p class="bio">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я обычный студент. Который вносит свою лепту в мир вэбдизайна - делает его проще и красивее. По всем вопросам можно обращаться по данной контактной информации.
+			</p>
+		</div>
+
+		<div class="col-lg-5 col-md-5">
+			<div class="number-block">
+				<p class="contact"><i class="fa fa-skype" aria-hidden="true"></i> skype:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dan_matweyv</p>
+				<p class="contact"><i class="fa fa-phone-square" aria-hidden="true"></i> number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +7(961)403-89-13</p>
+				<p class="contact"><i class="fa fa-envelope" aria-hidden="true"></i> email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ariosha6@gmail.com</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% include 'mini-temp/footer.html' %}
+
+<script
+  type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.min.js')}}">
+	$('#myTab a[href="#home"]').tab('show');
+	$('#myTab a[href="#profile"]').tab('show');
+	$('#myTab a:first').tab('show'); // Select first tab
+	$('#myTab a:last').tab('show'); // Select last tab
+</script>
+
+</body>
+</html>

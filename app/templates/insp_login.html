@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% include 'mini-temp/head.html' %}
+	<title>inspected your loginned</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	{% include 'mini-temp/navbar.html' %}
+	<div class="empty">
+	<div class="container-fluid">
+		<div class="form-admin col-md-4 col-md-offset-4  col-sm-6 col-sm-offset-3  col-xs-10 col-xs-offset-1">
+			<div class="form-title">
+				<p class="peace tit-text">Подтвердите ваши права на публикацию работ.</p>
+			</div>
+
+			<div class="form-block">
+				<form method="post" action="/login">
+					{{ form.csrf_token }}
+						{% if error%}
+							<div class="error">
+								<p class="error-text">Извините, но у вас не достаточно прав для этой операции</p>
+							</div>
+						{% endif %}						
+						<div class="text-bl"><p class="rev-adm">Admin name:</p></div>
+						{{form.nickname(class_="form-control")}}
+						<div class="text-bl"><p class="rev-adm">Password:</p></div>
+						{{form.password(class_="form-control")}}
+					<div class="form-group">
+						<input class="sub-btn peace" type="submit" value="Login">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+
+</body>
+</html>

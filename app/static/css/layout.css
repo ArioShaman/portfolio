@@ -1,0 +1,119 @@
+#editor{
+  height: 375px;
+  width: 600px;
+}
+#form-container {
+  width: 500px;
+}
+
+.row.form-group {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.lay-btn {
+  margin-left: 210px;
+}
+.change-link {
+  background-color: #000;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  bottom: 0;
+  color: #fff;
+  opacity: 0.8;
+  padding: 4px;
+  position: absolute;
+  text-align: center;
+  width: 150px;
+}
+.change-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+img {
+  width: 150px;
+}
+
+#editor-container {
+  height: 130px;
+}
+.span2{
+  margin-top: 150px;
+  width: 400px;
+  margin-left: 600px;
+}
+
+.form-buttons{
+  width: 400px;
+}
+
+
+#content {
+  background: white;
+  border: 1px solid #CCC;
+  padding: 12px;
+  overflow: scroll;
+  width: 400px;
+}
+
+#brand {
+  float: left;
+  font-weight: 300;
+}
+#my-content-2{
+  margin-left: 340px;
+  max-width: 900px;
+  margin-top: 50px;
+}
+.search-form {
+  margin: 0 5px;
+}
+
+.search-form form {
+  margin: 0;
+}
+
+.btn-menu {
+    margin: 4px 5px 0 0;
+    float: right;
+}
+
+.btn-menu a, .btn-menu input {
+  padding: 7px 16px !important;
+  border-radius: 0 !important;
+}
+
+.btn, textarea, input[type], button, .model-list {
+  border-radius: 0;
+}
+
+.model-list {
+  border-radius: 0;
+}
+
+.nav-pills li > a {
+  border-radius: 0;
+}
+
+.select2-container .select2-choice {
+  border-radius: 0;
+}
+
+
+
+.form-editor{
+  margin-top: 75px;
+}
+
+.send{
+  margin-top: 50px;
+  margin-left: 35%;
+  height: 50px;
+  width: 200px;
+    background-color: #23C746;
+}
+.send:hover{
+  background-color: #54F885;
+
+}
+

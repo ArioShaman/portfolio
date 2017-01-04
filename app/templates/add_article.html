@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add article</title>
+		{% include 'mini-temp/head.html' %}
+</head>
+<body>
+	{% include 'mini-temp/nav-admin.html' %}
+	<div class="empty-2">
+		<div class="panel-left">
+			<div class="adm-btn-cont">
+				<div class="adm-btn">
+					<a class="admin-link" href="/"><p class="margi">Общая информация</p></a>
+				</div>
+
+				<div class="adm-btn">
+					<a class="admin-link" href="/admin/fileadmin"><p class="margi">Управление контентом</p></a>
+				</div>
+				<div class="adm-btn">
+					<a class="admin-link active-m" href="/add_in_blog"><p class="margi"> Добавить статью</p></a>
+				</div>
+				<div class="adm-btn">
+					<a class="admin-link" href="#"><p class="margi">< None ></p></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="add_art_block"></div>
+
+	</div>
+</body>
+</html>

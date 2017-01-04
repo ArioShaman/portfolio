@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>not root</title>
+	<meta charset="utf-8">
+	{% include 'mini-temp/head.html' %}
+	<script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+	<script  src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+	<script  src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+	{% include 'mini-temp/navbar.html' %}
+	<p class="top-root">Вы не вошли в учетную запись, хотите это сделать?</p>
+</body>
+</html>

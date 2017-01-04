@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>about project</title>
+	<meta charset="utf-8">
+	{% include 'mini-temp/head.html' %}
+</head>
+<body>
+{% include 'mini-temp/navbar.html' %}
+
+<div class="review-block">
+	<div class="white-block col-md-8 col-md-offset-2">
+		<div class="container-fluid">
+			<div class="review-img-block col-md-5">
+				<img src="{{project.cover}}" class="review-img"> 
+			</div>
+			<div class="review-title-block col-md-6">
+				<p class="gal-title-2 peace">{{project.name}}</p>
+			
+				<p class="select-block">
+					<i class="fa fa-2x fa-desktop icon-review" aria-hidden="true"></i>
+					<span class="check-review">&ensp;&ensp;&ensp;&ensp;&ensp;Десктопная версия</span>
+					{% if project.desktop == 1 %}
+					<i class="fa fa-2x fa-check icon-rignt green" aria-hidden="true"></i>
+					{%endif%}
+					{% if project.desktop == 0 %}
+					<i class="fa fa-2x fa-times icon-rignt red" aria-hidden="true"></i>
+					{%endif%}
+				</p>
+				
+				<p class="select-block">
+					<i class="fa fa-2x fa-mobile icon-review" aria-hidden="true"></i>
+					<span class="check-review">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Мобильная адаптация</span>
+					{% if project.mobile_version == 1 %}
+					<i class="fa fa-2x fa-check icon-rignt green" aria-hidden="true"></i>
+					{%endif%}
+					{% if project.mobile_version == 0 %}
+					<i class="fa fa-2x fa-times icon-rignt red" aria-hidden="true"></i>
+					{%endif%}
+				</p>
+				<p class="select-block">
+					<i class="fa fa-2x fa-puzzle-piece icon-review" aria-hidden="true"></i>
+					<span class="check-review">&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;Интерактивность</span>
+					{% if project.interactive == 1 %}
+					<i class="fa fa-2x fa-check icon-rignt green" aria-hidden="true"></i>
+					{%endif%}
+					{% if project.interactive == 0 %}
+					<i class="fa fa-2x fa-times icon-rignt red" aria-hidden="true"></i>
+					{%endif%}
+				</p>
+				<p class="select-block">
+					<i class="fa fa-2x fa-map-marker icon-review" aria-hidden="true"></i>
+					<span class="check-review">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;Интерактивная карта</span>
+					{% if project.inter_map == 1 %}
+					<i class="fa fa-2x fa-check icon-rignt green" aria-hidden="true"></i>
+					{%endif%}
+					{% if project.inter_map == 0 %}
+					<i class="fa fa-2x fa-times icon-rignt red" aria-hidden="true"></i>
+					{%endif%}
+				</p>
+				<p class="select-block">
+					<i class="fa fa-2x fa-server icon-review" aria-hidden="true"></i>
+					<span class="check-review">&ensp;&ensp;&ensp;&ensp;Кем-то уже используется</span>
+					{% if project.using == 1 %}
+					<i class="fa fa-2x fa-check icon-rignt green" aria-hidden="true"></i>
+					{%endif%}
+					{% if project.using == 0 %}
+					<i class="fa fa-2x fa-times icon-rignt red" aria-hidden="true"></i>
+					{%endif%}
+				</p>
+
+			</div>
+		</div>
+
+		<div class="view">
+		<a href="{{project.link}}">
+			<i class="fa fa-4x fa-eye icon-yey" aria-hidden="true"></i>
+		</a>
+		</div>
+
+		<div class="text-rev merri-3">
+			{{project.review}}
+		</div>
+	</div>
+</div>
+</body>
+</html>

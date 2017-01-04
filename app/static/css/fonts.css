@@ -1,0 +1,137 @@
+@font-face{
+	src: url(fonts/alfa_slab.ttf);
+	font-family: Alfa-slab;
+}
+.slab{
+	font-family: Alfa-slab;
+	font-size: 21px;
+	position: absolute;
+	
+}
+@font-face{
+	src: url(fonts/Merriweather-Bold.ttf);
+	font-family: Merriweather-Bold;
+
+}
+.merri{
+	font-family: Merriweather-Bold;
+	font-size: 43px;
+	padding-top: 130px;
+	/*padding-left: 15%;
+	padding-right: 15%;*/
+	text-align: center;
+	color: white;
+	z-index: 2;
+}
+.merri-2{
+	font-family: Merriweather-Bold;
+	font-size: 43px;
+	padding-left: 15%;
+	padding-right: 15%;
+	color: white;
+	text-align: center;
+}
+.merri-3{
+	font-family: Merriweather-Bold;
+	font-size: 21px;
+	color: black;
+	text-align: center;
+}
+@font-face{
+	src: url(fonts/Rubik-Bold.ttf);
+	font-family: Rubic;
+}
+.specialized{
+	padding-top: 20px;
+	font-size: 20px;
+	font-family: Rubic;
+	text-align: center;
+}
+.skills{
+	font-family: Rubic;
+	font-size: 20px;
+	margin-top: 6px;
+	text-align: center;
+}
+
+.get-font{
+	font-family: Rubic;
+	font-size: 24px;
+	margin-top: 12px;
+	text-align: center;
+	color: white;
+}
+.rubik{
+	font-family: Rubic;
+}
+
+@font-face{
+	src: url(fonts/ComfortaaBold.ttf);
+	font-family: ComfortaaBold;
+}
+
+.description{
+	font-family: ComfortaaBold;
+	font-size: 21px;
+	padding-top: 25px;
+	padding-left: 9%;
+	padding-right: 5%;
+}
+.name{
+	font-family: ComfortaaBold;
+	color: white;
+	font-size: 31px;
+}
+
+.bio{
+	font-family: ComfortaaBold;
+	font-size: 21px;
+	color: white;
+	margin-top: 100px;
+}
+
+@font-face{
+	src: url(fonts/Hammersmith.ttf);
+	font-family: Hammersmith;
+}
+.contact{
+	font-family: Hammersmith;
+	font-size: 20px;
+	color: white;
+	padding-left: 50px;
+}
+.soc-link{
+	text-decoration: none;
+	color:white;
+}
+.soc-link:hover{
+	color: #000D19;
+}
+
+.preview{
+	text-align: center;
+	font-size: 43px;
+	color: white;
+	font-family: Hammersmith;
+	margin-top: 100px;	
+}
+@font-face{
+	src: url(fonts/Anton.ttf);
+	font-family: Anton;
+}
+
+.gal-title{
+	font-family: Anton;
+	font-size: 60px;
+	text-align: center;
+	margin-top: 100px;
+	color:orange;
+}
+
+@font-face{
+	src: url(fonts/Peace-Sans.ttf);
+	font-family: Peace-Sans;
+}
+.peace{
+	font-family: Peace-Sans;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>admin panel</title>
+		{% include 'mini-temp/head.html' %}
+</head>
+<body>
+	{% include 'mini-temp/nav-admin.html' %}
+	<div class="empty-2">
+		<div class="panel-left">
+			<div class="adm-btn-cont">
+				<div class="adm-btn">
+					<a class="admin-link" href="/"><p class="margi">Общая информация</p></a>
+				</div>
+
+				<div class="adm-btn active">
+					<a class="admin-link" href="/admin/fileadmin"><p class="margi">Управление контентом</p></a>
+				</div>
+				<div class="adm-btn">
+					<a class="admin-link" href="/add_in_blog"><p class="margi"> Добавить статью</p></a>
+				</div>
+				<div class="adm-btn">
+					<a class="admin-link" href="#"><p class="margi">< None ></p></a>
+				</div>
+			</div>
+		</div>
+		
+		{% if type =='main'%}
+		<div class="content-main">
+			{% for dir in dirs %}
+				<p>{{dir}}</p>
+			{% endfor %}
+		</div>
+		{% endif %}
+		</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+  {% include 'mini-temp/head.html' %}
+
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='ckeditor/contents.css')}}">
+<script src="//cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+
+  <script type="text/css" src="{{ url_for('static',filename='js/js.js')}}"></script>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/layout.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/fonts.css')}}">
+
+</head>
+<body>
+
+
+<form class="form-editor col-md-8 col-md-offset-2" action="/sendtempl" method="POST">
+  <textarea name="editor1" id="editor1" rows="10" cols="80">
+    This is my textarea to be replaced with CKEditor.
+  </textarea>
+  <input type="submit" name="send" value="SEND" class="send merri-3" >
+  <script>
+      CKEDITOR.replace('editor1');
+  </script>
+
+</form>
+
+</body>
+</html>
