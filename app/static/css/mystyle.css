@@ -845,11 +845,60 @@
 }
 
 .top-root{
-  margin: 100px auto;
+  margin: 180px auto;
   text-align: center;
 }
 
+.root-exception{
+	font-size: 21px;
+}
+.yes-btn-cont{
+	height: 100px;
+	width: 350px;
+	background-color: ;
+	margin:-100px auto;
+}
+.font-pad{
+	padding-top: 10px;
+	font-size: 21px;
+	color: white;
+	text-align: center;
+}
+.green-btn{
+	height: 50px;
+	width: 150px;
+	background-color: #30D12E;
+	position: relative;
+	float: left;
+	text-decoration: none;
+	transition: border-radius 0.5s;
 
+}
+.green-btn:hover{
+	text-decoration: none;
+	background-color: #82EA81;
+	border-radius: 10px;
+	transition: border-radius 0.5s;
+}
+.red-btn{
+	height: 50px;
+	width: 150px;
+	background-color: #FF2200;
+	position: relative;
+	float: left;
+	margin-left: 50px;
+	transition: border-radius 0.5s;
+}
+.red-btn:hover{
+	text-decoration: none;
+	background-color: #FF7A66;
+	border-radius: 10px;
+	transition: border-radius 0.5s;
+}
+.red-btn:hover .font-pad,.green-btn:hover .font-pad{
+	font-size: 26px;
+	padding-top: 7px;
+}
 
 
 

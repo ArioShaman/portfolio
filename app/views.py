@@ -24,6 +24,10 @@ import models
 from flask_mail import Message
 from app import mail
 
+
+from flask import request
+from flask import jsonify
+
 @lm.user_loader
 def load_user(id):
     return Admin.query.get(int(id))
@@ -201,6 +205,7 @@ def uploaded_file(filename):
 def uploaded_file_form_project(filename):
     return send_from_directory(DOWNLOAD_FOLDER, filename)
 
+
 #использовать в крайней необходимости
 #@app.route('/register/<nickname>/<password>')
 #def register(nickname,password):
@@ -212,3 +217,7 @@ def uploaded_file_form_project(filename):
 		#return redirect('/')
 	#else:
 		#return 'lol'
+
+@app.route("/get_my_ip", methods=["GET"])
+def get_my_ip():
+	return jsonify({'ip': request.remote_addr}), 200

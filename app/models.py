@@ -7,6 +7,7 @@ ROLE_ADMIN = 1
 def cut(self):
     String = self[:64]
     return String
+
 class Admin(db.Model):
     uid = db.Column(db.Integer, primary_key = True)
     nickname = db.Column(db.String(64), index = True, unique = True)
@@ -56,4 +57,11 @@ class projects(db.Model):
     def __repr__(self):
         return '<projects %r>' % (self.name)
     
-   
+class Articles(db.Model):
+    art_id = db.Column(db.Integer, primary_key = True) 
+    art_name = db.Column(db.String(64), unique = True)
+    review = db.Column(db.String(254))
+    cover = db.Column(db.String(128), unique = True)
+    page = db.Column(db.String(128), unique = True)
+    visits = db.Column(db.Integer, default = 0)
+    
