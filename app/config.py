@@ -18,7 +18,7 @@ MAIL_PORT = 465
 MAIL_USE_TLS = False
 MAIL_USE_SSL = True
 MAIL_USERNAME = 'ariosha6'
-MAIL_PASSWORD = '5005qwert'
+MAIL_PASSWORD = 'secretpassword'
 
 # administrator list
 ADMINS = ['ariosha6@gmail.com']
